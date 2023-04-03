@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>Sound of Memories</title>
+  <!-- Lien vers le fichier css compilé à partir du fichier scss -->
+  <link rel="stylesheet" href="sass/custom.css">
+  <!-- Lien Bootstrap -->  
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Lien vers Fontawesome -->
+  <script defer src="https://kit.fontawesome.com/2cf8922f6a.js" crossorigin="anonymous"></script>
+  <!-- Importer jQuery avant les autres plugins -->
+  <script defer src="node_modules/jquery/dist/jquery.js"></script>
+  <!-- Importer Bootstrap après jQuery -->
+  <script defer src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- Importer mo.js pour les effets du click, au début en node, l'effet ne fonctionne pas j'ai alors testé en CDN du coup-->
+  <script defer src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
+  <!-- Importer votre fichier custom.js après les plugins -->
+  <script defer src="js/custom.js"></script>
+  <!-- script Web Playback SDK -->
+  <script defer src="https://sdk.scdn.co/spotify-player.js"></script>
+</head>
+<body>
+  <header id="logo">
+    <nav class="navbar navbar-dark bg-dark fixed-top ">
+            <div class="container-fluid  justify-content-around">
+<!-- Menu appraissant à gauche du logo -->
+        <div class="collapse nav-menu col-3">
+          <ul class="navbar-nav d-flex flex-row justify-content-around">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#bio"> BIO <i class="fa-solid fa-dna"></i> </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./merch.html">MERCH <i class="fa-solid fa-shirt"></i></a>
+            </li>
+          </ul>
+        </div>
+
+<!-- Navbar avec logo du groupe faisant office de bouton -->
+
+
+        <div class="show ">
+          <a class="navbar-toggler text-center mx-auto " href="#" data-bs-toggle="collapse" data-bs-target=".nav-menu">
+            <img src="./assets/Logo.png" width="310" height="60" alt="Logo Sound Of Memories" id="logo">
+          </a>
+        </div>
+
+<!-- Menu apparaissant à droite du logo-->
+        <div class=" collapse nav-menu col-3">
+          <ul class="navbar-nav d-flex flex-row justify-content-around" >
+            <li class="nav-item">
+              <a class="nav-link active " aria-current="page" href="./clip.html"><i class="fa-brands fa-youtube"></i> VIDEOS </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./contact.html"> <i class="fa-regular fa-envelope"></i>  CONTACT </a>
+            </li>
+          </ul>
+        </div>
+      </div>  
+    </nav>
+
+  </header>
+
+  <main class="mt-4">
+    <!-- Section avec effet parallaxe et bio du groupe -->
+    <section class="section parallax" id="bio">
+      <h1>Sound of Memories</h1>
+      <p>Sound of Memories est un groupe de death metal mélodique formé en 2010 à Paris par Alain (guitare), Lucho (guitare) et Fabien (basse). Influencé par des groupes comme In Flames, Dark Tranquillity ou At The Gates, le groupe propose un mélange de riffs heavy et thrash metal sur une base de death mélodique old school. Après avoir recruté Nacim à la batterie et Flo au chant, le groupe enregistre son premier EP “Living Circles” en 2013 au studio Zoe-H. Le groupe reçoit des critiques positives et se fait remarquer sur scène lors de festivals et de concerts. En 2015, le groupe signe sur le label Finisterian Dead End et sort son premier album “To Deliverance”, produit par Julien Delsol. Le groupe continue de tourner et de composer, et sort son deuxième album “The Sand Within” en 2018. Sound of Memories se distingue par sa musique énergique, brutale et mélodique, qui ravit les fans de headbang et de metal</p>
+    </section>
+
+    <!-- Section avec liens vers les api de youtubemusic, spotify et bandcamp -->
+    <section class="section static">
+      <h2>Écoutez notre musique</h2>
+      <p>Vous pouvez écouter notre musique sur les plateformes suivantes : METTRE API ICI</p>
+      <img id=“image-rotate” src='./assets/vinylSandWithin.png' alt='Vinyl image'>
+      <!-- Apres l'image du vinyl je met les boutons -->
+      <button id="play-button">Play</button>
+      <button id="pause-button">Pause</button>
+      <button id="next-button">Next</button>
+    </section>
+  </main>
+<!-- Start Footer -->
+<footer class="bg-dark" id="tempaltemo_footer">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="text-center w-50 pt-5">
+          <h2 class="h2 text-success border-bottom pb-3 border-light logo">Sound Of Memories Home</h2>
+          <ul class="list-unstyled text-light footer-link-list">
+              <li>
+                  <i class="fas fa-map-marker-alt fa-fw"></i>
+                  99 rue du docteur FATON, 41100 Vendôme
+              </li>
+              <li>
+                  <i class="fa fa-phone fa-fw"></i>
+                  <a class="text-decoration-none" href="tel:010-020-0340">06.29.68.52.78.</a>
+              </li>
+              <li>
+                  <i class="fa fa-envelope fa-fw"></i>
+                  <a class="text-decoration-none" href="mailto:info@company.com">frederic.fribel@hotmail.fr</a>
+              </li>
+          </ul>
+          </div>
+
+      </div>
+  <div class="row text-light mb-4">
+  <div class="col-12 mb-3">
+      <div class="w-100 my-3  border-light"></div>
+  </div>
+  <h2 class="h2  border-bottom pb-3 border-light">Contact</h2>
+  <div class="col-auto me-auto">
+      <ul class="list-inline text-left footer-icons">
+          <li class="list-inline-item border border-light rounded-circle text-center">
+              <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+          </li>
+          <li class="list-inline-item border border-light rounded-circle text-center">
+              <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+          </li>
+          <li class="list-inline-item border border-light rounded-circle text-center">
+              <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
+          </li>
+          <li class="list-inline-item border border-light rounded-circle text-center">
+              <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+          </li>
+      </ul>
+  </div>
+  <div class="col-auto">
+      <label class="sr-only" for="subscribeEmail">Email address</label>
+      <div class="input-group mb-2">
+          <input type="text" class="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email address">
+          <div class="input-group-text btn-success text-light">Subscribe</div>
+      </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="w-100 bg-black py-3">
+    <div class="container">
+        <div class="row pt-2">
+            <div class="col-8">
+                <p class="text-left text-light">
+                    Copyright &copy; 2023 Frédéric FRIBEL 
+                    | Designed by <a rel="sponsored" href="https://github.com/FredFreeb" target="_blank">FredFreeb</a>
+                </p>
+            </div> 
+            <div class="col-2"></div>
+            <div class="col-2">
+                <p class="text-left text-light">
+                  <a rel="mentions" href="./mentions.html" target="_blank">Mentions Légales</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</footer>
+<!-- End Footer -->
+</body>
+</html>  

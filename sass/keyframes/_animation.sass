@@ -1,0 +1,16 @@
+.image-rotate 
+    width: 25vw
+    height: 25vh
+    // Définir l'animation nommée 'rotation' qui dure 1.8 secondes 
+    animation: rotation 1.8s
+    // Répéter l'animation indéfiniment 
+    animation-iteration-count: infinite
+    // Utiliser une transition linéaire pour l'animation
+    animation-timing-function: linear
+
+@keyframes rotation 
+    0%
+        transform: rotate(0deg)        
+        // Définir le point d'arrivée de l'animation : rotation de 359 degrés
+    100%
+        transform: rotate(359deg)

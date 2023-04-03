@@ -1,0 +1,80 @@
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300';
+@import '../node_modules/mdb-ui-kit/css/mdb.min.css';
+html {
+  margin: 0;
+  padding: 0.1%;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-image: url(../assets/fondSOM.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+section {
+  height: 100vh;
+}
+
+.btn-wrapper {
+  position: fixed;
+  top: calc(50% - 22px);
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  box-shadow: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+  outline: 0;
+  background-color: rgb(0, 240, 168);
+  height: 45px;
+  line-height: 42px;
+  padding: 0 30px;
+  font-size: 20px;
+  border-radius: 30px;
+  color: rgb(40, 45, 50);
+  cursor: pointer;
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.2, 3, 0.4, 1);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.btn:hover {
+  transform: scale(1.1, 1.1);
+}
+.btn:active {
+  transform: scale(1.05, 1.05);
+}
+
+.mask-custom {
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  background-color: rgba(110, 117, 109, 0.35);
+}
+
+.image-rotate {
+  width: 25vw;
+  height: 25vh;
+  animation: rotation 1.8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}/*# sourceMappingURL=custom.css.map */
